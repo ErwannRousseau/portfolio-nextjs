@@ -90,31 +90,26 @@ function Navbar() {
             </Link>
           </li>
           <li className="Navbar-mobile-item">
-            {' '}
             <Link onClick={handleClick} to="about" spy smooth duration={500} offset={-80}>
               À propos
             </Link>
           </li>
           <li className="Navbar-mobile-item">
-            {' '}
             <Link onClick={handleClick} to="skills" spy smooth duration={500} offset={-80}>
               Skills
             </Link>
           </li>
           <li className="Navbar-mobile-item">
-            {' '}
             <Link onClick={handleClick} to="work" spy smooth duration={500} offset={-80}>
               Projets
             </Link>
           </li>
           <li className="Navbar-mobile-item">
-            {' '}
             <Link onClick={handleClick} to="contact" spy smooth duration={500} offset={-80}>
               Contact
             </Link>
           </li>
         </ul>
-
         <span style={{ width: `${scrolled}` }} className="Navbar-progress" />
       </motion.nav>
       {/* Social icons */}
