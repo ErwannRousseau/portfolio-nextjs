@@ -63,3 +63,7 @@ yarn lint
 ## Contributions
 
 Les contributions sont les bienvenues ! Pour proposer des modifications, vous pouvez créer une 'pull request'. Assurez-vous d'avoir passé vos modifications au linter avant de soumettre votre 'pull request'.
+
+## Évolution
+
+Projet de création d'un blog pour y rédiger quelques articles qui me semblent intéressants pour des développeurs.
