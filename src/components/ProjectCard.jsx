@@ -13,25 +13,25 @@ function ProjectCard({ project, index, activeProject, setActiveProject }) {
   return (
     <motion.article
       variants={fadeIn('up', 'tween', index * 0.3 + 1, 1)}
-      className="shadow-[0px_4px_14px_rgba(0,0,0,0.4)] hover:scale-105 perspective-800 max-w-sm  transform md:hover:scale-105 transition duration-500"
+      className="perspective-800 max-w-sm transform shadow-[0px_4px_14px_rgba(0,0,0,0.4)]  transition duration-500 hover:scale-105 md:hover:scale-105"
     >
       <div
-        className={`Project-card transform-style-preserve relative h-full transition-transform duration-[0.5s] bg-white px-3 py-3 rounded-xl ${
+        className={`Project-card transform-style-preserve relative h-full rounded-xl bg-white px-3 py-3 transition-transform duration-[0.5s] ${
           activeProject === project.id ? 'rotateY-180' : ''
         }`}
       >
-        <div className="h-full rounded-lg inset-0 backface-hidden flex flex-col justify-between">
+        <div className="backface-hidden inset-0 flex h-full flex-col justify-between rounded-lg">
           <div>
             <Image
               className="w-full rounded shadow-[0px_2px_14px_rgba(0,0,0,0.2)] "
               src={project.image}
               alt="project"
             />
-            <h1 className="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">{project.title}</h1>
+            <h1 className="mt-4 cursor-pointer text-2xl font-bold text-gray-800">{project.title}</h1>
             <p className="my-4">{project.description}</p>
           </div>
           <div>
-            <div className="flex space-x-1 items-center">
+            <div className="flex items-center space-x-1">
               <SVGCode />
               <p>{project.stack}</p>
             </div>
@@ -39,17 +39,17 @@ function ProjectCard({ project, index, activeProject, setActiveProject }) {
               onClick={() => {
                 setActiveProject(project.id);
               }}
-              className="mt-4 text-xl w-full text-white bg-[#ec407a] py-2 rounded-xl shadow-lg"
+              className="mt-4 w-full rounded-xl bg-[#ec407a] py-2 text-xl text-white shadow-lg"
               type="button"
             >
               Voir le projet
             </button>
           </div>
         </div>
-        <div className="h-full rounded-lg inset-0 backface-hidden absolute flex flex-col justify-around gap-2 p-4 lg:gap-4 rotateY-180 ">
+        <div className="backface-hidden absolute inset-0 flex h-full flex-col justify-around gap-2 rounded-lg p-4 rotateY-180 lg:gap-4 ">
           <Video url={project.video} />
           <a href={project.link} target="blank">
-            <div className="bg-[linear-gradient(-20deg,#2b2b2b_0%,#434343_100%)] px-0 py-2 rounded-[0.6rem] flex items-center justify-center h-[175px] shadow-[0px_4px_14px_rgba(0,0,0,0.4)] active:translate-x-px active:translate-y-0.5">
+            <div className="flex h-[175px] items-center justify-center rounded-[0.6rem] bg-[linear-gradient(-20deg,#2b2b2b_0%,#434343_100%)] px-0 py-2 shadow-[0px_4px_14px_rgba(0,0,0,0.4)] active:translate-x-px active:translate-y-0.5">
               <Image className="h-[90%] w-auto" src={GitHub} alt="logo GitHub" />
             </div>
           </a>

@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
@@ -6,10 +7,10 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
     'airbnb',
     'plugin:prettier/recommended',
     'next/core-web-vitals',
+    'next',
   ],
   parserOptions: {
     ecmaVersion: 2021,
@@ -29,7 +30,7 @@ module.exports = {
       version: 'detect',
     },
   },
-  plugins: ['react', 'react-hooks', 'prettier'],
+  plugins: ['react', 'prettier'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],

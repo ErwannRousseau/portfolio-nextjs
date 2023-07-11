@@ -83,7 +83,7 @@ function Contact() {
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
         >
-          <motion.h2 variants={fadeIn('up', 'tween', 0, 1)} className="self-baseline Contact-title">
+          <motion.h2 variants={fadeIn('up', 'tween', 0, 1)} className="Contact-title self-baseline">
             Contact
           </motion.h2>
           <TypingText

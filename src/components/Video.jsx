@@ -60,11 +60,11 @@ function Video({ url }) {
         ref={videoRef}
         src={url}
         controls={false}
-        className="block shadow-[0px_4px_14px_rgba(0,0,0,0.4)] rounded-[0.6rem]"
+        className="block rounded-[0.6rem] shadow-[0px_4px_14px_rgba(0,0,0,0.4)]"
       />
       <button
         type="button"
-        className="absolute w-10 -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4"
+        className="absolute left-2/4 top-2/4 w-10 -translate-x-2/4 -translate-y-2/4"
         onClick={togglePlay}
       >
         <Image src={iconPlay} alt="icon-play" className="active:translate-x-px active:translate-y-0.5" />
