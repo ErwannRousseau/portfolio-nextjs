@@ -34,8 +34,3 @@ TypingText.propTypes = {
   link: PropTypes.string,
   linkStyle: PropTypes.string,
 };
-
-// TypingText.defaultProps = {
-//   link: '',
-//   linkStyle: '',
-// };

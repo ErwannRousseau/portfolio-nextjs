@@ -14,7 +14,6 @@ function Skills() {
 
   return (
     <section name="skills" className="Skills">
-      {/* Container */}
       <motion.div
         className="Skills-container"
         variants={staggerContainer}
