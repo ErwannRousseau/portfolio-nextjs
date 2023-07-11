@@ -1,0 +1,80 @@
+@use '../../styles/vars.scss';
+
+.Contact {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  color: vars.$text-color;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1.5rem;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Contact-title {
+    font-size: vars.$title-size;
+    line-height: vars.$title-line-height;
+    font-weight: vars.$title-weight;
+    display: inline;
+    border-bottom: 4px solid vars.$pink;
+  }
+
+  .Contact-description {
+    padding: 1rem 0;
+  }
+
+  .link-style {
+    color: vars.$pink;
+    text-decoration: underline solid vars.$pink;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      max-width: 90%;
+    }
+
+    .Contact-input-name,
+    .Contact-input-email,
+    .Contact-input-message {
+      color: #000;
+      background-color: vars.$text-color;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+    }
+
+    .Contact-input-email {
+      margin: 1rem 0;
+    }
+
+    .Contact-submit {
+      background-color: transparent;
+      border: 2px solid vars.$pink;
+      color: #fff;
+      font-weight: bold;
+      padding: 0.75rem 1rem;
+      margin: 2rem auto;
+      align-items: center;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: vars.$pink;
+        cursor: pointer;
+      }
+
+      &:disabled:hover {
+        background-color: inherit;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

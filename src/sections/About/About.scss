@@ -1,0 +1,63 @@
+@use '../../styles/vars.scss';
+
+.About {
+  color: vars.$text-color;
+  width: 100%;
+  height: 100dvh;
+  padding: 0 1.5rem;
+
+  @media (max-height: 700px) {
+    height: 100%;
+    margin-top: 3rem;
+  }
+
+  &-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &-header {
+    padding-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      text-align: center;
+    }
+
+    &-title {
+      font-size: vars.$title-size;
+      line-height: vars.$title-line-height;
+      font-weight: vars.$title-weight;
+      display: inline;
+      border-bottom: 4px solid vars.$pink;
+    }
+  }
+
+  &-content {
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-details {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+
+      @media (min-width: 768px) {
+        text-align: right;
+      }
+    }
+
+    &-pres {
+      padding-top: 0.5rem;
+    }
+  }
+}
