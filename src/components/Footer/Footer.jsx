@@ -11,6 +11,11 @@ import { footerVariants } from '@/utils/motion';
 function Footer() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   return (
     <motion.footer id="footer" variants={footerVariants} initial="hidden" whileInView="show" className="Footer">
       <div className="Footer-container">
@@ -46,8 +51,12 @@ function Footer() {
         <div className="Footer-bottom">
           <div className="Footer-legal">
             <span>Copyright © 2023 Erwann Rousseau</span>
-            <Link href="/legal/conditions">Conditions d&apos;utilisation</Link>
-            <Link href="/legal/confidentialite">Confidentialité</Link>
+            <Link href="/legal/conditions" onClick={handleScrollToTop}>
+              Conditions d&apos;utilisation
+            </Link>
+            <Link href="/legal/confidentialite" onClick={handleScrollToTop}>
+              Confidentialité
+            </Link>
           </div>
         </div>
       </div>
