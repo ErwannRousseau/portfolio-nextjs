@@ -47,6 +47,7 @@
     }
 
     &-details {
+      margin: auto;
       font-size: 2.5rem;
       line-height: 2.5rem;
       font-weight: 700;
@@ -57,7 +58,10 @@
     }
 
     &-pres {
-      padding-top: 0.5rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
     }
   }
 }
