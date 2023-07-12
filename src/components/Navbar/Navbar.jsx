@@ -100,12 +100,12 @@ function Navbar() {
             </Link>
           </li>
           <li className="Navbar-mobile-item">
-            <Link onClick={handleClick} to="work" spy smooth duration={500} offset={-80}>
+            <Link onClick={handleClick} to="work" spy smooth duration={500} offset={0}>
               Projets
             </Link>
           </li>
           <li className="Navbar-mobile-item">
-            <Link onClick={handleClick} to="contact" spy smooth duration={500} offset={-80}>
+            <Link onClick={handleClick} to="contact" spy smooth duration={500} offset={-50}>
               Contact
             </Link>
           </li>

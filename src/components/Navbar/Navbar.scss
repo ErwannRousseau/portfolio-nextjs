@@ -38,15 +38,34 @@ $background-color: #0a192f;
     &-item {
       margin: 0 16px;
       cursor: pointer;
+      position: relative;
 
-      & a:hover {
-        border-bottom: 3px solid vars.$pink;
-        padding-bottom: 5px;
+      a::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        width: 0;
+        height: 3px;
+        background-color: vars.$pink;
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        transform: translateX(-50%);
       }
 
-      & .active {
-        border-bottom: 3px solid vars.$pink;
-        padding-bottom: 5px;
+      a:hover::after {
+        width: 100%;
+      }
+
+      & .active::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        width: 100%;
+        height: 3px;
+        background-color: vars.$pink;
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        transform: translateX(-50%);
       }
     }
   }

@@ -29,7 +29,7 @@ function Home() {
             applications web dynamiques.
           </motion.p>
           <motion.div variants={textVariant(1.3)}>
-            <Link to="work" smooth duration={500} offset={-80}>
+            <Link to="work" smooth duration={500}>
               <button type="button" className="Home-btn">
                 Voir mes travaux
                 <span className="Home-arrow">
@@ -39,7 +39,7 @@ function Home() {
             </Link>
           </motion.div>
         </div>
-        <motion.div variants={slideIn('right', 'spring', 0.1, 1)} className="hero-img" />
+        <motion.div className="hero-img" variants={slideIn('right', 'spring', 0.1, 1)} />
       </motion.div>
     </header>
   );
