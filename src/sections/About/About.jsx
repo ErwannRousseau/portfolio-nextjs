@@ -30,9 +30,9 @@ function About() {
             <p>
               En tant que développeur junior, j&apos;ai à cœur de continuellement améliorer mes compétences et
               d&apos;apprendre de nouvelles technologies. Je trouve une réelle satisfaction dans la création d&apos;un
-              code bien structuré et clair, en veillant à ce qu&apos;il soit compréhensible, maintenable et extensible.{' '}
-              <br />
-              <br />
+              code bien structuré et clair, en veillant à ce qu&apos;il soit compréhensible, maintenable et extensible.
+            </p>
+            <p>
               Mon objectif est de grandir en tant que développeur web en acquérant de l&apos;expérience pratique. Si
               vous recherchez un développeur web junior passionné et déterminé à fournir des produits de qualité,
               n&apos;hésitez pas à me contacter. Je serais ravi de participer à des projets passionnants et de

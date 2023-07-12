@@ -39,7 +39,7 @@ function Home() {
             </Link>
           </motion.div>
         </div>
-        <motion.div variants={slideIn('right', 'spring', 0, 1)} className="hero-img" />
+        <motion.div variants={slideIn('right', 'spring', 0.1, 1)} className="hero-img" />
       </motion.div>
     </header>
   );
