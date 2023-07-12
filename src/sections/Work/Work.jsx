@@ -33,7 +33,7 @@ function Work() {
   }, [activeProject]);
 
   return (
-    <section name="work" className="mb-20 min-h-[85dvh] w-full px-6 text-[#ccd6f6] sm:pt-40 md:pt-20 lg:pt-0">
+    <section name="work" className="mb-20 min-h-[85dvh] w-full px-6 pt-20 text-[#ccd6f6]">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
