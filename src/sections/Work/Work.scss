@@ -9,3 +9,9 @@
 .perspective-800 {
   perspective: 800px;
 }
+
+.paddingTop {
+  @media (widht >= 768px) {
+    padding-top: 10rem;
+  }
+}
