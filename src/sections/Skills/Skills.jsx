@@ -24,7 +24,10 @@ function Skills() {
         <motion.h2 className="Skills-title" variants={fadeIn('up', 'tween', 0, 1)}>
           Skills
         </motion.h2>
-        <TypingText subtitle="// Voici les technologies avec lesquelles je travaille" textStyles="py-4 self-baseline" />
+        <TypingText
+          subtitle="// Voici les technologies avec lesquelles je travaille"
+          textStyles="py-4 self-baseline break-words"
+        />
 
         <div className="Skills-tech-container">
           {/* Skills */}

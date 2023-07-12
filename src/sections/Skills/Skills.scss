@@ -30,7 +30,7 @@
     line-height: vars.$title-line-height;
     font-weight: vars.$title-weight;
     display: inline;
-    border-bottom: 4px solid #ec407a;
+    border-bottom: 4px solid vars.$pink;
   }
 
   &-tech-container {
