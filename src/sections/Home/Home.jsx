@@ -29,7 +29,7 @@ function Home() {
             applications web dynamiques.
           </motion.p>
           <motion.div variants={textVariant(1.3)}>
-            <Link to="work" smooth duration={500}>
+            <Link to="work" smooth duration={500} offset={-80}>
               <button type="button" className="Home-btn">
                 Voir mes travaux
                 <span className="Home-arrow">
