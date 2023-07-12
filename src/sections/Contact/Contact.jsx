@@ -1,12 +1,14 @@
 'use client';
 
 import './Contact.scss';
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import isValidDomain from 'is-valid-domain';
 import { fadeIn, staggerContainer, textVariant } from '@/utils/motion';
-import { TypingText, ToastNotif } from '@/components';
+import { TypingText } from '@/components';
 
 function Contact() {
   const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
@@ -18,8 +20,6 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const resetForm = () => {
@@ -30,47 +30,43 @@ function Contact() {
     evt.preventDefault();
     setLoading(true);
 
+    if (isSubmitted) {
+      toast.info("💡 Vous m'avez déjà envoyé un message");
+      setLoading(false);
+      return;
+    }
+
     if (!email.trim() || !name.trim() || !message.trim()) {
-      setError('Veuillez remplir tous les champs');
-      setTimeout(() => {
-        setError(null);
-      }, 5000);
+      toast.error('🙈 Veuillez remplir tous les champs');
       setLoading(false);
       return;
     }
 
     const emailParts = email.split('@');
     if (emailParts.length !== 2) {
-      setError("L'email n'est pas valide");
-      setTimeout(() => {
-        setError(null);
-      }, 5000);
+      toast.error("🙈 L'email n'est pas valide");
       setLoading(false);
       return;
     }
-
     const domain = emailParts[1];
+
     if (!isValidDomain(domain)) {
-      setError("Le domaine de l'email n'est pas valide");
+      toast.error("🙈 Le domaine de l'email n'est pas valide");
       setLoading(false);
     } else {
       emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
         () => {
-          setSuccess('Votre message a bien été envoyé, je reviendrais vers vous le plus vite possible');
+          toast.success('🚀 Votre message a bien été envoyé, je reviendrais vers vous le plus vite possible!');
           resetForm();
           setLoading(false);
+          setIsSubmitted(true);
         },
         () => {
-          setError("Une erreur c'est produite");
+          toast.error("🙊 Une erreur c'est produite");
           setLoading(false);
         }
       );
     }
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setSuccess(null);
-      setError(null);
-    }, 5000);
   };
 
   return (
@@ -83,12 +79,12 @@ function Contact() {
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
         >
-          <motion.h2 variants={fadeIn('up', 'tween', 0, 1)} className="Contact-title self-baseline">
+          <motion.h2 variants={fadeIn('up', 'tween', 0, 1)} className="Contact-title">
             Contact
           </motion.h2>
           <TypingText
             subtitle="// Remplissez le formulaire ci-dessous ou envoyez-moi un email - "
-            textStyles="py-4"
+            textStyles="py-4 break-words"
             link="erwann.rousseau@icloud.com"
             linkStyle="link-style"
           />
@@ -118,24 +114,13 @@ function Contact() {
               placeholder="Quel est votre message ?"
               onChange={(e) => setMessage(e.target.value)}
             />
-            <motion.button variants={textVariant(1.2)} type="submit" className="Contact-submit" disabled={isSubmitted}>
+            <motion.button variants={textVariant(1.2)} type="submit" className="Contact-submit">
               {loading ? 'Envoie en cours...' : 'Envoyer'}
             </motion.button>
           </form>
         </motion.div>
       </section>
-      <ToastNotif
-        success={success}
-        toggleToast={() => {
-          setSuccess(null);
-        }}
-      />
-      <ToastNotif
-        error={error}
-        toggleToast={() => {
-          setError(null);
-        }}
-      />
+      <ToastContainer />
     </>
   );
 }
