@@ -33,7 +33,7 @@ function Work() {
   }, [activeProject]);
 
   return (
-    <section name="work" className="mb-20 min-h-[100dvh] w-full px-6 text-[#ccd6f6] md:pt-20">
+    <section name="work" className="mb-20 min-h-[85dvh] w-full px-6 text-[#ccd6f6] md:pt-20">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -47,7 +47,10 @@ function Work() {
         >
           Projets
         </motion.h2>
-        <TypingText subtitle="// Découvrez quelques-uns de mes projets récents" textStyles="py-4 self-baseline" />
+        <TypingText
+          subtitle="// Découvrez quelques-uns de mes projets récents"
+          textStyles="py-4 self-baseline break-words"
+        />
 
         <div className="mx-auto my-0 flex max-w-[1000px] flex-col items-center gap-8 pt-10 text-black max-[800px]:mt-5 ">
           <div className="gap-5 space-y-10 md:grid md:grid-cols-2 md:space-y-0 md:px-4 lg:grid-cols-3">

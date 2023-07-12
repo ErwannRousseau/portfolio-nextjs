@@ -9,14 +9,14 @@ import { textContainer, textVariant2 } from '../utils/motion';
 
 export default function TypingText({ subtitle, textStyles, link = null, linkStyle = null }) {
   return (
-    <motion.p variants={textContainer} className={`${textStyles}`}>
+    <motion.p variants={textContainer} className={`${textStyles} w-full`}>
       {Array.from(subtitle).map((letter, index) => (
         <motion.span variants={textVariant2} key={index}>
           {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
       {link && (
-        <motion.a href={`mailto:${link}`} className={linkStyle}>
+        <motion.a href={`mailto:${link}`} className={`${linkStyle} w-full`}>
           {Array.from(link).map((linkLetter, linkIndex) => (
             <motion.span variants={textVariant2} key={linkIndex}>
               {linkLetter}
