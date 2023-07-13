@@ -6,14 +6,13 @@
   margin: 30px 0 0;
   color: vars.$text-color;
   padding: 0 1.5rem;
-  margin-bottom: -2rem;
-
-  @media (min-width: 900px) {
-    height: 100dvh;
-  }
 
   @media (min-width: 768px) {
     padding-top: 80px;
+  }
+
+  @media (width < 768px) {
+    margin-bottom: -2rem;
   }
 
   &-container {
