@@ -5,6 +5,9 @@ $grey: #8892b0;
 .Home {
   width: 100%;
   padding: 0 1.5rem;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
 
   &-container {
     max-width: 1000px;
@@ -13,13 +16,7 @@ $grey: #8892b0;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
-    padding-top: 3rem;
-
-    @media (max-height: 700px) {
-      height: 100%;
-      padding-top: 4.7rem;
-    }
+    padding-top: 4.7rem;
 
     @media (min-width: 1024px) {
       flex-direction: row;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Loader from '@public/loader.svg';
 
-function Loading() {
+function LoaderComponent() {
   return (
     <div className="flex h-screen w-full items-center justify-center ">
       <Image src={Loader} width={50} height={50} alt="loader" className="object-contain" />
@@ -9,4 +9,4 @@ function Loading() {
   );
 }
 
-export default Loading;
+export default LoaderComponent;

@@ -115,7 +115,7 @@ function Contact() {
               onChange={(e) => setMessage(e.target.value)}
             />
             <motion.button variants={textVariant(1.2)} type="submit" className="Contact-submit">
-              {loading ? 'Envoie en cours...' : 'Envoyer'}
+              {loading ? 'Envoi en cours...' : 'Envoyer'}
             </motion.button>
           </form>
         </motion.div>
