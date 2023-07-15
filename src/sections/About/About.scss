@@ -5,6 +5,8 @@
   width: 100%;
   min-height: 100dvh;
   padding: 0 1.5rem;
+  display: grid;
+  align-items: center;
 
   @media (width <= 768px) {
     margin-top: 4rem;
