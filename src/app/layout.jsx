@@ -5,7 +5,6 @@ export const metadata = {
   charset: 'utf-8',
   viewport: 'width=device-width, initial-scale=1.0',
   'http-equiv': 'x-ua-compatible',
-  googleSiteVerification: 'fQRFJubY-v10y9tCxBpB49tmOHF1MBI1MGu903yfMLw',
   links: [
     {
       rel: 'stylesheet',
