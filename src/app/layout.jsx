@@ -5,6 +5,7 @@ export const metadata = {
   charset: 'utf-8',
   viewport: 'width=device-width, initial-scale=1.0',
   'http-equiv': 'x-ua-compatible',
+  descripton: 'Portfolio Erwann Rousseau. Développeur fullstack, react php.',
   links: [
     {
       rel: 'stylesheet',
