@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/utils/motion';
 import Image from 'next/image';
 import GitHub from '@public/github.png';
+import Link from 'next/link';
 import SVGCode from './SVGCode';
 import Video from './Video';
 
@@ -35,25 +36,38 @@ function ProjectCard({ project, index, activeProject, setActiveProject }) {
               <SVGCode />
               <p>{project.stack}</p>
             </div>
-            <button
-              onClick={() => {
-                setActiveProject(project.id);
-              }}
-              className="mt-4 w-full rounded-xl bg-[#ec407a] py-2 text-xl text-white shadow-lg"
-              type="button"
-            >
-              Voir le projet
-            </button>
+            {project.link.includes('github.com') ? (
+              <button
+                onClick={() => {
+                  setActiveProject(project.id);
+                }}
+                className="mt-4 w-full rounded-xl bg-[#ec407a] py-2 text-xl text-white shadow-lg"
+                type="button"
+              >
+                Voir le projet
+              </button>
+            ) : (
+              <Link
+                target="_blank"
+                href={project.link}
+                className=" mt-4 w-full rounded-xl bg-[#ec407a] py-2 text-center text-xl text-white shadow-lg"
+                type="button"
+              >
+                Voir le projet
+              </Link>
+            )}
           </div>
         </div>
-        <div className="backface-hidden absolute inset-0 flex h-full flex-col justify-around gap-2 rounded-lg p-4 rotateY-180 lg:gap-4 ">
-          <Video url={project.video} />
-          <a href={project.link} target="blank">
-            <div className="flex h-[175px] items-center justify-center rounded-[0.6rem] bg-[linear-gradient(-20deg,#2b2b2b_0%,#434343_100%)] px-0 py-2 shadow-[0px_4px_14px_rgba(0,0,0,0.4)] active:translate-x-px active:translate-y-0.5">
-              <Image className="h-[90%] w-auto" src={GitHub} alt="logo GitHub" />
-            </div>
-          </a>
-        </div>
+        {project.video && (
+          <div className="backface-hidden absolute inset-0 flex h-full flex-col justify-around gap-2 rounded-lg p-4 rotateY-180 lg:gap-4 ">
+            <Video url={project.video} />
+            <a href={project.link} target="blank">
+              <div className="flex h-[175px] items-center justify-center rounded-[0.6rem] bg-[linear-gradient(-20deg,#2b2b2b_0%,#434343_100%)] px-0 py-2 shadow-[0px_4px_14px_rgba(0,0,0,0.4)] active:translate-x-px active:translate-y-0.5">
+                <Image className="h-[90%] w-auto" src={GitHub} alt="logo GitHub" />
+              </div>
+            </a>
+          </div>
+        )}
       </div>
     </motion.article>
   );

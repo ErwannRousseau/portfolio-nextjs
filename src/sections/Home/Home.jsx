@@ -15,7 +15,7 @@ function Home() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.25 }}
       >
         <div className="left">
           <motion.div variants={textVariant(1.1)}>
@@ -24,8 +24,8 @@ function Home() {
             <h2 className="Home-title">Je suis développeur web Full-Stack.</h2>
           </motion.div>
           <motion.p variants={textVariant(1.2)} className="Home-pres">
-            Je suis un développeur web full-stack junior passionné par la création d&apos;expériences interactives en
-            ligne. J&apos;ai une préférence marquée pour React, que j&apos;utilise avec enthousiasme pour développer des
+            Je suis un développeur web full-stack junior passionné par le web et ses technologies. J&apos;ai une
+            préférence marquée pour React et NextJS, que j&apos;utilise avec enthousiasme pour développer des
             applications web dynamiques.
           </motion.p>
           <motion.div variants={textVariant(1.3)}>

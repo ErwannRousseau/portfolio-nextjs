@@ -38,7 +38,7 @@ function Work() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.25 }}
         className="mx-auto my-0 flex max-w-[1000px] flex-col items-center justify-center"
       >
         <motion.h2

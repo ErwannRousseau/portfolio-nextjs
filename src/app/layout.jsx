@@ -1,31 +1,32 @@
 import '@/styles/globals.scss';
 
 export const metadata = {
-  title: 'Portfolio Erwann Rousseau',
+  metadataBase: new URL('https://erwannrousseau.com'),
+  title: 'Erwann Rousseau | Développeur Web Full-Stack à Nantes',
   charset: 'utf-8',
   viewport: 'width=device-width, initial-scale=1.0',
   'http-equiv': 'x-ua-compatible',
-  descripton: 'Portfolio Erwann Rousseau. Développeur fullstack, react php.',
+  descripton: 'Erwann Rousseau Développeur web fullstack à Nantes, next.js react php',
   links: [
     {
       rel: 'stylesheet',
       href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
     },
-    {
-      rel: 'icon',
-      href: '/favicon.ico',
-      type: 'image/x-icon',
-    },
-    {
-      rel: 'apple-touch-icon',
-      href: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      sizes: '192x192',
-      href: '/android-chrome-192x192.png',
-    },
   ],
+  icons: {
+    icon: [{ url: '/apple-touch-icon.png' }, new URL('/apple-touch-icon.png', 'https://erwannrousseau.com')],
+    shortcut: '/favicon.ico',
+    apple: [{ url: '/apple-touch-icon.png' }, { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
+  openGraph: {
+    title: 'Erwann Rousseau | Développeur Web Full-Stack à Nantes',
+    description: 'Erwann Rousseau Développeur web fullstack à Nantes, next.js react php',
+    url: 'https://erwannrousseau.com',
+    siteName: 'Erwann Rousseau | Développeur Web Full-Stack',
+    images: '/photo_cv.png',
+    locale: 'fr_FR',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }) {

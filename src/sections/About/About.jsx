@@ -13,7 +13,7 @@ function About() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.25 }}
         className="About-container"
       >
         <motion.div className="About-header" variants={fadeIn('up', 'spring', 0.2, 1)}>
