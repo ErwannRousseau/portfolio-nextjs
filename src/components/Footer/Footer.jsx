@@ -17,7 +17,14 @@ function Footer() {
     });
   };
   return (
-    <motion.footer id="footer" variants={footerVariants} initial="hidden" whileInView="show" className="Footer">
+    <motion.footer
+      id="footer"
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="Footer"
+    >
       <div className="Footer-container">
         <div className="Footer-top">
           <div className="Footer-link">

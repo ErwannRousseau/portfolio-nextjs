@@ -1,6 +1,7 @@
 import TaskManager from '@public/projects/taskmanager.png';
 import Chatroom from '@public/projects/chatroom.png';
 import oRecipes from '@public/projects/orecipes.png';
+import Atma from '@public/projects/atma-studio.png';
 
 import HTML from '@public/html.png';
 import CSS from '@public/css.png';
@@ -13,18 +14,28 @@ import MySQL from '@public/mysql.png';
 import PHP from '@public/php.png';
 import SCSS from '@public/scss.png';
 import Tailwind from '@public/tailwind.png';
-import Motion from '@public/framer-motion.png';
 import NextJS from '@public/nextjs.png';
+import TypeScript from '@public/typescript.png';
+import Sanity from '@public/sanity.png';
 
-// const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const data = {
   projects: [
     {
+      id: 4,
+      image: Atma,
+      title: 'ATMA Studio',
+      description:
+        'ATMA Studio est un site web administrable via un CMS headless, cela permet aux clients du site de modifier le contenu de leur site',
+      stack: 'NextJS / Tailwind / Sanity',
+      link: 'https://studio-atma.com',
+    },
+    {
       id: 1,
       image: TaskManager,
-      // video: `${baseUrl}/projects/taskmanager-video.mp4`,
-      video: `https://www.youtube.com/embed/KJII3TMt9ek`,
+      video: `${baseUrl}/projects/taskmanager-video.mp4`,
+      // video: `https://www.youtube.com/embed/KJII3TMt9ek`,
       title: 'Task Manager',
       description:
         'Task-Manager est une application web permettant de gérer les tâches en utilisant JavaScript pour la partie frontend et Laravel pour gérer la partie backend.',
@@ -34,19 +45,19 @@ const data = {
     {
       id: 2,
       image: Chatroom,
-      // video: `${baseUrl}/projects/chatroom-video.mp4`,
-      video: `https://www.youtube.com/embed/E62ZEjFCKrI`,
+      video: `${baseUrl}/projects/chatroom-video.mp4`,
+      // video: `https://www.youtube.com/embed/E62ZEjFCKrI`,
       title: 'Chatroom',
       description:
         "Chatroom est une application web de messagerie instantannée, alimentée par Express pour l'API, React pour le front-end et WebSocket pour une expérience de messagerie instantanée.",
-      stack: 'React.js / TailWind / Express',
+      stack: 'React.js / Tailwind / Express',
       link: 'https://github.com/ErwannRousseau/Chatroom',
     },
     {
       id: 3,
       image: oRecipes,
-      // video: `${baseUrl}/projects/orecipes-video.mp4`,
-      video: `https://www.youtube.com/embed/RXjE2DrgJCw`,
+      video: `${baseUrl}/projects/orecipes-video.mp4`,
+      // video: `https://www.youtube.com/embed/RXjE2DrgJCw`,
       title: 'oRecipes',
       description:
         "oRecipes est un projet de site web dédié aux recettes culinaires. Alimentée par Express pour l'API, React et SCSS pour le front-end pour offrir une expérience utilisateur conviviale et une gestion de connexion avec token JWT.",
@@ -79,7 +90,12 @@ const data = {
     {
       id: 5,
       image: JavaScript,
-      name: 'JAVASCRIPT',
+      name: 'JavaScript',
+    },
+    {
+      id: 14,
+      image: TypeScript,
+      name: 'TypeScript',
     },
     {
       id: 13,
@@ -93,8 +109,8 @@ const data = {
     },
     {
       id: 12,
-      image: Motion,
-      name: 'Framer Motion',
+      image: Sanity,
+      name: 'Sanity',
     },
     {
       id: 7,
