@@ -38,7 +38,13 @@ function Navbar() {
 
   return (
     <>
-      <motion.nav variants={navVariants} initial="hidden" whileInView="show" className="Navbar">
+      <motion.nav
+        variants={navVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="Navbar"
+      >
         <div>
           <Link to="home" spy smooth duration={500}>
             <Image src={Logo} alt="Logo" className="logo" />
