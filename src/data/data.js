@@ -18,7 +18,7 @@ import NextJS from '@public/nextjs.png';
 import TypeScript from '@public/typescript.png';
 import Sanity from '@public/sanity.png';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+// const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const data = {
   projects: [
@@ -34,8 +34,8 @@ const data = {
     {
       id: 1,
       image: TaskManager,
-      video: `${baseUrl}/projects/taskmanager-video.mp4`,
-      // video: `https://www.youtube.com/embed/KJII3TMt9ek`,
+      // video: `${baseUrl}/projects/taskmanager-video.mp4`,
+      video: `https://www.youtube.com/embed/KJII3TMt9ek`,
       title: 'Task Manager',
       description:
         'Task-Manager est une application web permettant de gérer les tâches en utilisant JavaScript pour la partie frontend et Laravel pour gérer la partie backend.',
@@ -45,8 +45,8 @@ const data = {
     {
       id: 2,
       image: Chatroom,
-      video: `${baseUrl}/projects/chatroom-video.mp4`,
-      // video: `https://www.youtube.com/embed/E62ZEjFCKrI`,
+      // video: `${baseUrl}/projects/chatroom-video.mp4`,
+      video: `https://www.youtube.com/embed/E62ZEjFCKrI`,
       title: 'Chatroom',
       description:
         "Chatroom est une application web de messagerie instantannée, alimentée par Express pour l'API, React pour le front-end et WebSocket pour une expérience de messagerie instantanée.",
@@ -56,8 +56,8 @@ const data = {
     {
       id: 3,
       image: oRecipes,
-      video: `${baseUrl}/projects/orecipes-video.mp4`,
-      // video: `https://www.youtube.com/embed/RXjE2DrgJCw`,
+      // video: `${baseUrl}/projects/orecipes-video.mp4`,
+      video: `https://www.youtube.com/embed/RXjE2DrgJCw`,
       title: 'oRecipes',
       description:
         "oRecipes est un projet de site web dédié aux recettes culinaires. Alimentée par Express pour l'API, React et SCSS pour le front-end pour offrir une expérience utilisateur conviviale et une gestion de connexion avec token JWT.",
