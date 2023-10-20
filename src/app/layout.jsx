@@ -14,7 +14,10 @@ export const metadata = {
     },
   ],
   icons: {
-    icon: [{ url: '/apple-touch-icon.png' }, new URL('/apple-touch-icon.png', 'https://erwannrousseau.com')],
+    icon: [
+      { url: 'https://erwannrousseau.com/favicon.ico', type: 'image/x-icon' },
+      new URL('/apple-touch-icon.png', 'https://erwannrousseau.com'),
+    ],
     shortcut: '/favicon.ico',
     apple: [{ url: '/apple-touch-icon.png' }, { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
