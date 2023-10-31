@@ -50,8 +50,7 @@ function ProjectCard({ project, index, activeProject, setActiveProject }) {
               <Link
                 target="_blank"
                 href={project.link}
-                className=" mt-4 w-full rounded-xl bg-[#ec407a] py-2 text-center text-xl text-white shadow-lg"
-                type="button"
+                className=" mt-4 block w-full rounded-xl bg-[#ec407a] py-2 text-center text-xl text-white shadow-lg"
               >
                 Voir le projet
               </Link>
