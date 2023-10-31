@@ -9,7 +9,7 @@ import JavaScript from '@public/javascript.png';
 import ReactImg from '@public/react.png';
 import GitHub from '@public/github.png';
 import Git from '@public/git.png';
-import Laravel from '@public/laravel.png';
+// import Laravel from '@public/laravel.png';
 import MySQL from '@public/mysql.png';
 import PHP from '@public/php.png';
 import SCSS from '@public/scss.png';
@@ -117,11 +117,11 @@ const data = {
       image: PHP,
       name: 'PHP',
     },
-    {
-      id: 8,
-      image: Laravel,
-      name: 'Laravel',
-    },
+    // {
+    //   id: 8,
+    //   image: Laravel,
+    //   name: 'Laravel',
+    // },
     {
       id: 9,
       image: MySQL,
