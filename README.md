@@ -12,7 +12,6 @@ Ce projet est un portfolio personnel développé avec Next.js, une framework de 
 - [React Parallax Tilt](https://www.npmjs.com/package/react-parallax-tilt) - Version 1.7.151
 - [React Scroll](https://www.npmjs.com/package/react-scroll) - Version 1.8.9
 - [EmailJS](https://www.npmjs.com/package/@emailjs/browser) - Version 3.11.0
-- [Sharp](https://www.npmjs.com/package/sharp) - Version 0.32.2
 
 ## Installation
 
