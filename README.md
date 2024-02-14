@@ -1,6 +1,6 @@
 # Mon Portfolio
 
-Ce projet est un portfolio personnel développé avec Next.js, une framework de React.
+Ce projet est un portfolio personnel développé avec Next.js, une framework de React.js
 
 ## Technologies utilisées
 
